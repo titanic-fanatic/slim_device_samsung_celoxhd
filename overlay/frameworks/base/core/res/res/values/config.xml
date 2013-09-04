@@ -44,9 +44,39 @@
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
         <item>15</item>
-        <item>150</item>
-        <item>1500</item>
-        <item>15000</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+        <item>60</item>
+        <item>70</item>
+        <item>80</item>
+        <item>90</item>
+        <item>100</item>
+        <item>120</item>
+        <item>180</item>
+        <item>240</item>
+        <item>360</item>
+        <item>480</item>
+        <item>720</item>
+        <item>960</item>
+        <item>1200</item>
+        <item>1440</item>
+        <item>1680</item>
+        <item>1920</item>
+        <item>2880</item>
+        <item>3840</item>
+        <item>4800</item>
+        <item>5760</item>
+        <item>6720</item>
+        <item>7680</item>
+        <item>8640</item>
+        <item>9600</item>
+        <item>10560</item>
+        <item>11520</item>
+        <item>12480</item>
+        <item>14400</item>
     </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
@@ -54,10 +84,40 @@
          than the size of the config_autoBrightnessLevels array.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
+        <item>20</item>
+        <item>24</item>
+        <item>28</item>
+        <item>32</item>
+        <item>36</item>
         <item>40</item>
-        <item>100</item>
-        <item>150</item>
-        <item>210</item>
+        <item>44</item>
+        <item>48</item>
+        <item>56</item>
+        <item>64</item>
+        <item>72</item>
+        <item>80</item>
+        <item>88</item>
+        <item>96</item>
+        <item>104</item>
+        <item>112</item>
+        <item>120</item>
+        <item>128</item>
+        <item>136</item>
+        <item>144</item>
+        <item>136</item>
+        <item>152</item>
+        <item>160</item>
+        <item>168</item>
+        <item>176</item>
+        <item>184</item>
+        <item>192</item>
+        <item>200</item>
+        <item>208</item>
+        <item>216</item>
+        <item>224</item>
+        <item>232</item>
+        <item>240</item>
+        <item>248</item>
         <item>255</item>
     </integer-array>
 
@@ -66,8 +126,38 @@
          than the size of the config_autoBrightnessLevels array.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessButtonBacklightValues">
-        <item>255</item>
-        <item>255</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>0</item>
+        <item>0</item>
         <item>0</item>
         <item>0</item>
         <item>0</item>
@@ -78,8 +168,38 @@
          than the size of the config_autoBrightnessLevels array.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessKeyboardBacklightValues">
-        <item>255</item>
-        <item>255</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>0</item>
+        <item>0</item>
         <item>0</item>
         <item>0</item>
         <item>0</item>

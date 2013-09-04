@@ -1,0 +1,10 @@
+--- .repo/local_manifests/local_manifest.xml	1969-12-31 17:00:00.000000000 -0700
++++ patches/.repo/local_manifests/local_manifest.xml	2013-08-27 21:09:48.330280998 -0600
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<manifest>
++  <project name="SlimRoms/device_samsung_msm8660-common" path="device/samsung/msm8660-common" remote="github" revision="jb" />
++  <project name="CyanogenMod/android_kernel_samsung_msm8660-common" path="kernel/samsung/msm8660-common" remote="github" revision="jellybean" />
++  <project name="titanic-fanatic/android_device_samsung_celoxhd" path="device/samsung/celoxhd" remote="github" revision="jellybean" />
++  <project name="titanic-fanatic/android_vendor_samsung_celoxhd" path="vendor/samsung/celoxhd" remote="github" revision="jellybean" />
++</manifest>

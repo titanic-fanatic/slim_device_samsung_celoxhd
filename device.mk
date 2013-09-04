@@ -26,8 +26,8 @@ $(call inherit-product-if-exists, vendor/samsung/celoxhd/celoxhd-vendor.mk)
 DEVICE_PACKAGE_OVERLAYS += device/samsung/celoxhd/overlay
 
 # Device uses high-density artwork where available
-PRODUCT_AAPT_CONFIG := normal hdpi
-PRODUCT_AAPT_PREF_CONFIG := hdpi
+PRODUCT_AAPT_CONFIG := normal xhdpi hdpi
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
@@ -54,6 +54,8 @@ $(call inherit-product, device/samsung/msm8660-common/msm8660.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 $(call inherit-product-if-exists, vendor/samsung/celoxhd/celoxhd-vendor.mk)
+
+#$(call inherit-product-if-exists, device/samsung/celoxhd/media-files.mk)
 
 #WIFI_BAND := 802_11_ABG
 #$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4330/device-bcm.mk)
