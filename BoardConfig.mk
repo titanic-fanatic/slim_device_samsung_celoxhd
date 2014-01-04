@@ -1,4 +1,4 @@
-# Copyright (C) 2009 The Android Open Source Project
+# Copyright (C) 2012 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -25,8 +25,8 @@
 # against the traditional rules of inheritance).
 USE_CAMERA_STUB := true
 
-# inherit from common msm8660
--include device/samsung/msm8660-common/BoardConfigCommon.mk
+# inherit from common celox
+-include device/samsung/celox-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
 -include vendor/samsung/celoxhd/BoardConfigVendor.mk
@@ -39,13 +39,18 @@ TARGET_OTA_ASSERT_DEVICE := SGH-I757M,SGH-I757,celoxhd,SGHI757M,SGHI757
 # Kernel
 TARGET_KERNEL_CONFIG        := cyanogenmod_celoxhd_defconfig
 TARGET_KERNEL_SOURCE        := kernel/samsung/msm8660-common
-BOARD_KERNEL_CMDLINE        := androidboot.hardware=qcom msm_watchdog.appsbark=0 msm_watchdog.enable=1 loglevel=4
 BOARD_KERNEL_BASE           := 0x48000000
-BOARD_KERNEL_PAGESIZE       := 2048
-BOARD_FORCE_RAMDISK_ADDRESS := 0x49500000
 
-# Override bootable/recovery/minui/graphics.c
-BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/celoxhd/recovery/graphics.c
+# Assert minimum baseband version
+TARGET_BOARD_INFO_FILE ?= device/samsung/celoxhd/board-info.txt
+
+# cat /proc/emmc
+#dev:        size     erasesize name
+#mmcblk0p22: 00fffc00 00000200 "recovery"
+#mmcblk0p8: 01000000 00000200 "boot"
+#mmcblk0p24: 5ffffc00 00000200 "system"
+#mmcblk0p26: 13fffe00 00000200 "cache"
+#mmcblk0p25: 9ffffe00 00000200 "userdata"
 
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
@@ -54,23 +59,5 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 838860800
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 20044333056
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-BOARD_HAS_NO_SELECT_BUTTON := true
-
-# Suppress the WIPE command since it can brick our EMMC
-BOARD_SUPPRESS_EMMC_WIPE := true
-
-# Workaround for glitches while cropping bypass layers
-# TODO (orphaned) TARGET_NO_BYPASS_CROPPING := true
-
-# MTP
-# TODO (orphaned) BOARD_MTP_DEVICE := "/dev/mtp_usb"
-
-# Disable initlogo, Samsungs framebuffer is weird
-TARGET_NO_INITLOGO := true
-
-# Preload the boot animation to avoid jerkiness
-TARGET_BOOTANIMATION_PRELOAD := true
-
-# VoIP
-#COMMON_GLOBAL_CFLAGS += -DQCOM_VOIP_ENABLED
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/skyrocket/bluetooth
 

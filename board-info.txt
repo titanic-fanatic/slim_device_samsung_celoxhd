@@ -1,0 +1,2 @@
+require version-baseband=I757M:UGMC5
+
