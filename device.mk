@@ -14,8 +14,8 @@
 # limitations under the License.
 #
 
-# Also get non-open-source specific aspects if available
-$(call inherit-product, vendor/samsung/celoxhd/celoxhd-vendor.mk)
+## (2) Also get non-open-source specific aspects if available
+$(call inherit-product-if-exists, vendor/samsung/celoxhd/celoxhd-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/celoxhd/overlay
@@ -32,5 +32,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/celoxhd/firmware/bcm4330B1.hcd:system/etc/firmware/bcm4330B1.hcd
 
+# init.d scripts
+PRODUCT_COPY_FILES += \
+    device/samsung/celoxhd/root/system/etc/init.d/91fixoverlays:system/etc/init.d/91fixoverlays
+
 # Inherit from celox-common
 $(call inherit-product, device/samsung/celox-common/celox-common.mk)
+
+$(call inherit-product-if-exists, vendor/samsung/celoxhd/celoxhd-vendor.mk)
