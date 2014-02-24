@@ -17,7 +17,7 @@
 ## (2) Also get non-open-source specific aspects if available
 $(call inherit-product-if-exists, vendor/samsung/celoxhd/celoxhd-vendor.mk)
 
-# Overlays
+## overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/celoxhd/overlay
 
 # Device uses high-density artwork where available
@@ -28,7 +28,7 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 PRODUCT_COPY_FILES += \
     device/samsung/celoxhd/ramdisk/init.qcom.usb.rc:root/init.qcom.usb.rc
 
-# Bluetooth firmware
+# BT firmware
 PRODUCT_COPY_FILES += \
     device/samsung/celoxhd/firmware/bcm4330B1.hcd:system/etc/firmware/bcm4330B1.hcd
 

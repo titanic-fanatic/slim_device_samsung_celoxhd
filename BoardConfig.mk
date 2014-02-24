@@ -37,9 +37,9 @@ TARGET_BOOTLOADER_BOARD_NAME := celoxhd
 TARGET_OTA_ASSERT_DEVICE := SGH-I757M,SGH-I757,celoxhd,SGHI757M,SGHI757
 
 # Kernel
+BOARD_KERNEL_BASE           := 0x48000000
 TARGET_KERNEL_CONFIG        := cyanogenmod_celoxhd_defconfig
 TARGET_KERNEL_SOURCE        := kernel/samsung/msm8660-common
-BOARD_KERNEL_BASE           := 0x48000000
 
 # Assert minimum baseband version
 TARGET_BOARD_INFO_FILE ?= device/samsung/celoxhd/board-info.txt
